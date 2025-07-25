@@ -1,0 +1,25 @@
+apiVersion: v2
+name: jboss
+version: 0.0.1
+appVersion: "7.4"
+kubeVersion: ">= 1.13.0"
+description: JBoss Helm Chart
+type: application
+home: https://github.com/Scalified/helm-jboss
+icon: https://scalified.github.io/helm-jboss/icon.png
+maintainers:
+  - name: Vladyslav Baidak
+    email: vld.x@hotmail.com
+    url: https://scalified.com
+keywords:
+  - red-hat
+  - jboss-eap
+  - jboss
+  - eap
+  - war
+  - ear
+annotations:
+  artifacthub.io/category: integration-delivery
+  artifacthub.io/signKey: |
+    fingerprint: 687D9BE990493C58C0CFBEB65A065879383D7E21
+    url: https://keybase.io/scalified/pgp_keys.asc
