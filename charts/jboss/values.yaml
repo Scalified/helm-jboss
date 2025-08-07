@@ -86,7 +86,7 @@ jboss:
   #       claimName: jboss
   volumes: []
 
-    # Configuration for the Kubernetes Service exposing JBoss
+  # Configuration for the Kubernetes Service exposing JBoss
   # If set to null, no Service resource will be created
   service:
     # Kubernetes service type (e.g., ClusterIP, NodePort, LoadBalancer)
