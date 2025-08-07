@@ -87,7 +87,6 @@ jboss:
   volumes: []
 
   # Configuration for the Kubernetes Service exposing JBoss
-  # If set to null, no Service resource will be created
   service:
     # Kubernetes service type (e.g., ClusterIP, NodePort, LoadBalancer)
     type: ClusterIP
@@ -100,10 +99,8 @@ jboss:
         protocol: TCP
 
   # Configuration for Ingress to expose JBoss via HTTP/HTTPS
-  # If set to null, no Ingress resource will be created
   ingress:
-    # Annotations to customize the behavior of the ingress controller.
-    # Leave as null to disable.
+    # Annotations to customize the behavior of the ingress controller
     # Example:
     # annotations:
     #   nginx.ingress.kubernetes.io/proxy-body-size: "100m"
@@ -113,14 +110,14 @@ jboss:
     annotations: {}
     # Ingress class name (used to select the Ingress controller, e.g., nginx or traefik)
     className: nginx
-    # TLS configuration for the ingress. Set to null to disable
+    # TLS configuration for the ingress
     # Example:
     # tls:
     #   - hosts:
     #       - jboss.example.com
     #     secretName: jboss-tls
     tls: []
-    # List of ingress rules. If null or empty, no ingress will be created
+    # List of ingress rules
     # Example:
     # rules:
     #   - host: jboss.example.com
