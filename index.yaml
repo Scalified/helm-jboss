@@ -1,0 +1,33 @@
+apiVersion: v1
+entries:
+  jboss:
+  - annotations:
+      artifacthub.io/category: integration-delivery
+      artifacthub.io/signKey: |
+        fingerprint: 687D9BE990493C58C0CFBEB65A065879383D7E21
+        url: https://keybase.io/scalified/pgp_keys.asc
+    apiVersion: v2
+    appVersion: "7.4"
+    created: "2025-08-07T11:48:50.280872014Z"
+    description: JBoss Helm Chart
+    digest: ef7d523dbf32301d547974da2bc9606943ba21643cd93129bfb2bf28ee0c755c
+    home: https://github.com/Scalified/helm-jboss
+    icon: https://scalified.github.io/helm-jboss/icon.png
+    keywords:
+    - red-hat
+    - jboss-eap
+    - jboss
+    - eap
+    - war
+    - ear
+    kubeVersion: '>= 1.13.0'
+    maintainers:
+    - email: vld.x@hotmail.com
+      name: Vladyslav Baidak
+      url: https://scalified.com
+    name: jboss
+    type: application
+    urls:
+    - https://github.com/Scalified/helm-jboss/releases/download/jboss-0.0.1/jboss-0.0.1.tgz
+    version: 0.0.1
+generated: "2025-08-07T11:48:50.280879368Z"
