@@ -24,40 +24,32 @@ jboss:
       # Liveness probe determines if the JBoss container is running properly
       # If this probe fails, Kubernetes will restart the container automatically
       # This helps recover from deadlock or crash scenarios where the app is unresponsive
-      livenessProbe:
-        httpGet:
-          path: /
-          port: 8080
-          scheme: HTTP
-        # Time to wait before first probe after container starts
-        initialDelaySeconds: 10
-        # How often to perform the probe (in seconds)
-        periodSeconds: 20
-        # When to timeout the probe (in seconds)
-        timeoutSeconds: 2
-        # Minimum consecutive successes to be considered healthy
-        successThreshold: 1
-        # Minimum consecutive failures to be considered unhealthy and trigger restart
-        failureThreshold: 5
+      # Example:
+      # livenessProbe:
+      #   httpGet:
+      #     path: /
+      #     port: 8080
+      #     scheme: HTTP
+      #   initialDelaySeconds: 10
+      #   periodSeconds: 20
+      #   timeoutSeconds: 2
+      #   successThreshold: 1
+      #   failureThreshold: 5
       
       # Readiness probe determines if the JBoss container is ready to accept traffic
       # If this probe fails, Kubernetes will stop sending traffic to the container until it passes again
       # This ensures traffic only goes to containers that are fully initialized and capable of handling requests
-      readinessProbe:
-        httpGet:
-          path: /
-          port: 8080
-          scheme: HTTP
-        # Time to wait before first probe after container starts (should be longer than liveness)
-        initialDelaySeconds: 15
-        # How often to perform the probe (in seconds)
-        periodSeconds: 20
-        # When to timeout the probe (in seconds)
-        timeoutSeconds: 2
-        # Minimum consecutive successes to be considered ready
-        successThreshold: 1
-        # Minimum consecutive failures to be considered not ready
-        failureThreshold: 5
+      # Example:
+      # readinessProbe:
+      #   httpGet:
+      #     path: /
+      #     port: 8080
+      #     scheme: HTTP
+      #   initialDelaySeconds: 15
+      #   periodSeconds: 20
+      #   timeoutSeconds: 2
+      #   successThreshold: 1
+      #   failureThreshold: 5
 
       resources:
         requests:
