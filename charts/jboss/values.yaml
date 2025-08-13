@@ -21,6 +21,9 @@ jboss:
         # Image pull policy (e.g., Always, IfNotPresent, Never)
         pullPolicy: IfNotPresent
 
+      # Environment variables for JBoss container
+      env: []
+
       # Liveness probe determines if the JBoss container is running properly
       # If this probe fails, Kubernetes will restart the container automatically
       # This helps recover from deadlock or crash scenarios where the app is unresponsive

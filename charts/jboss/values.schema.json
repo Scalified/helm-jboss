@@ -59,6 +59,25 @@
                     "pullPolicy"
                   ]
                 },
+                "env": {
+                  "type": "array",
+                  "description": "Environment variables for JBoss container",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "value"
+                    ]
+                  }
+                },
                 "livenessProbe": {
                   "type": "object",
                   "description": "Liveness probe configuration for the JBoss container",
