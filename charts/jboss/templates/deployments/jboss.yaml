@@ -25,6 +25,10 @@ spec:
           image: "{{ .repository }}:{{ .tag | default $.Chart.AppVersion }}"
           imagePullPolicy: {{ .pullPolicy | default "IfNotPresent" }}
           {{- end }}
+          {{- if .env }}
+          env:
+            {{- toYaml .env | nindent 12 }}
+          {{- end }}
           {{- if $jboss.service }}
           ports:
             {{- range $jboss.service.ports }}
@@ -35,25 +39,25 @@ spec:
           {{- end }}
           {{- if .livenessProbe }}
           livenessProbe:
-          {{- toYaml .livenessProbe | nindent 12 }}
+            {{- toYaml .livenessProbe | nindent 12 }}
           {{- end }}
           {{- if .readinessProbe }}
           readinessProbe:
-          {{- toYaml .readinessProbe | nindent 12 }}
+            {{- toYaml .readinessProbe | nindent 12 }}
           {{- end }}
           {{- if .resources }}
           resources:
-          {{- toYaml .resources | nindent 12 }}
+            {{- toYaml .resources | nindent 12 }}
           {{- end }}
           {{- if .volumeMounts }}
           volumeMounts:
-          {{- toYaml .volumeMounts | nindent 12 }}
+            {{- toYaml .volumeMounts | nindent 12 }}
           {{- end }}
         {{- end }}
       hostname: {{ .hostname | default "jboss" }}
       restartPolicy: Always
       {{- if .volumes }}
       volumes:
-      {{- toYaml .volumes | nindent 8 }}
+        {{- toYaml .volumes | nindent 8 }}
       {{- end }}
   {{- end }}

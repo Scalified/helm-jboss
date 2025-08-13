@@ -1,4 +1,4 @@
-{{- if and .Values.jboss.ingress (or .Values.jboss.ingress.rules .Values.jboss.ingress.defaultBackend) }}
+{{- if .Values.jboss.ingress }}
 {{- with .Values.jboss.ingress }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -11,14 +11,14 @@ metadata:
     {{- toYaml .annotations | nindent 4 }}
   {{- end }}
 spec:
-  ingressClassName: {{ .className }}
+  ingressClassName: {{ .className | default "nginx" }}
   {{- if .tls }}
   tls:
-  {{- toYaml .tls | nindent 4 }}
+    {{- toYaml .tls | nindent 4 }}
   {{- end }}
   {{- if .rules }}
   rules:
-  {{- toYaml .rules | nindent 4 }}
+    {{- toYaml .rules | nindent 4 }}
   {{- end }}
 {{- end }}
 {{- end }}

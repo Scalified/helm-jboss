@@ -455,10 +455,7 @@
                 ]
               }
             }
-          },
-          "required": [
-            "className"
-          ]
+          }
         }
       },
       "required": [
