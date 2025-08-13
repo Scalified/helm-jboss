@@ -1,4 +1,4 @@
-{{- if .Values.jboss.ingress }}
+{{- if and .Values.jboss.ingress (or .Values.jboss.ingress.rules .Values.jboss.ingress.defaultBackend) }}
 {{- with .Values.jboss.ingress }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
