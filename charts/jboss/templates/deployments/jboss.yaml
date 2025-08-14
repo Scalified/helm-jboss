@@ -55,6 +55,10 @@ spec:
           {{- end }}
         {{- end }}
       hostname: {{ .hostname | default "jboss" }}
+      {{- if .imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml .imagePullSecrets | nindent 8 }}
+      {{- end }}
       restartPolicy: Always
       {{- if .volumes }}
       volumes:

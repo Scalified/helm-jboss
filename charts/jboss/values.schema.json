@@ -254,6 +254,23 @@
           "description": "Hostname used for the JBoss pod/container",
           "default": "jboss"
         },
+        "imagePullSecrets": {
+          "type": "array",
+          "description": "Array of image pull secrets to use for pulling images from private registries",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the image pull secret"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          },
+          "default": []
+        },
         "volumes": {
           "type": "array",
           "description": "Additional volumes to be mounted into the pod",

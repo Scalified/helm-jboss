@@ -73,6 +73,12 @@ jboss:
   # Hostname used for the JBoss pod/container
   hostname: jboss
 
+  # Image pull secrets for the JBoss container
+  # Example
+  # imagePullSecrets:
+  #   - name: private-registry-secret
+  imagePullSecrets: []
+
   # Additional volumes to be mounted into the pod
   # Example:
   # volumes:
