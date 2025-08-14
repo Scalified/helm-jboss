@@ -8,6 +8,35 @@ entries:
         url: https://keybase.io/scalified/pgp_keys.asc
     apiVersion: v2
     appVersion: "7.4"
+    created: "2025-08-14T11:00:31.871217151Z"
+    description: JBoss Helm Chart
+    digest: dbafedb964b8abc40c7a12da6b7370232a24cb471f8ef7f42205937615469244
+    home: https://github.com/Scalified/helm-jboss
+    icon: https://scalified.github.io/helm-jboss/icon.png
+    keywords:
+    - red-hat
+    - jboss-eap
+    - jboss
+    - eap
+    - war
+    - ear
+    kubeVersion: '>= 1.13.0'
+    maintainers:
+    - email: vld.x@hotmail.com
+      name: Vladyslav Baidak
+      url: https://scalified.com
+    name: jboss
+    type: application
+    urls:
+    - https://github.com/Scalified/helm-jboss/releases/download/jboss-0.0.11/jboss-0.0.11.tgz
+    version: 0.0.11
+  - annotations:
+      artifacthub.io/category: integration-delivery
+      artifacthub.io/signKey: |
+        fingerprint: 687D9BE990493C58C0CFBEB65A065879383D7E21
+        url: https://keybase.io/scalified/pgp_keys.asc
+    apiVersion: v2
+    appVersion: "7.4"
     created: "2025-08-13T11:17:36.982368203Z"
     description: JBoss Helm Chart
     digest: d7c0e574ea267b55683b430fb6400a31d6d68719949149da63020c657730f496
@@ -291,4 +320,4 @@ entries:
     urls:
     - https://github.com/Scalified/helm-jboss/releases/download/jboss-0.0.1/jboss-0.0.1.tgz
     version: 0.0.1
-generated: "2025-08-13T11:17:36.982429346Z"
+generated: "2025-08-14T11:00:31.871259121Z"
