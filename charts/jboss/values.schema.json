@@ -16,11 +16,16 @@
     },
     "jboss": {
       "type": "object",
-      "description": "JBoss Configuration",
+      "description": "JBoss Enterprise Application Platform (EAP) configuration for Kubernetes deployment",
       "properties": {
+        "annotations": {
+          "type": "object",
+          "description": "Metadata annotations for the JBoss deployment",
+          "default": {}
+        },
         "replicaCount": {
           "type": "integer",
-          "description": "Number of replicas/pods to run (should typically be 1)",
+          "description": "Number of replicas/pods to run (should typically be 1 for JBoss EAP)",
           "minimum": 1,
           "default": 1
         },

@@ -6,6 +6,12 @@ fullnameOverride: ""
 
 # JBoss configuration
 jboss:
+  # Metadata annotations for the JBoss deployment
+  # Example:
+  # annotations:
+  #   example.com/annotation: "value"
+  annotations: {}
+
   # Number of replicas/pods to run (should typically be 1)
   replicaCount: 1
 
