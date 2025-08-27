@@ -12,6 +12,12 @@ jboss:
   #   example.com/annotation: "value"
   annotations: {}
 
+  # Active deadline seconds for the JBoss pod
+  # This specifies the duration in seconds that the pod may be active before the system tries to mark it as failed
+  # Useful for preventing runaway deployments or long-running processes
+  # Example: activeDeadlineSeconds: 3600  # 1 hour
+  activeDeadlineSeconds: null
+
   # Number of replicas/pods to run (should typically be 1)
   replicaCount: 1
 
