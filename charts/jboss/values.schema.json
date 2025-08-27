@@ -23,12 +23,6 @@
           "description": "Metadata annotations for the JBoss deployment",
           "default": {}
         },
-        "activeDeadlineSeconds": {
-          "type": ["integer", "null"],
-          "description": "Duration in seconds that the pod may be active before the system tries to mark it as failed",
-          "minimum": 1,
-          "default": null
-        },
         "replicaCount": {
           "type": "integer",
           "description": "Number of replicas/pods to run (should typically be 1 for JBoss EAP)",

@@ -22,9 +22,6 @@ spec:
       labels:
         {{- include "jboss.selectorLabels" $ | nindent 8 }}
     spec:
-      {{- if .activeDeadlineSeconds }}
-      activeDeadlineSeconds: {{ .activeDeadlineSeconds }}
-      {{- end }}
       containers:
         {{- with .containers.jboss }}
         - name: {{ $.Chart.Name }}
