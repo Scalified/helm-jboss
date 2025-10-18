@@ -23,7 +23,7 @@ jboss:
         # Docker image repository for JBoss
         repository: scalified/jboss-eap
         # Image tag to use (leave empty to use default from Chart or latest)
-        tag: "7.4"
+        tag: ""
         # Image pull policy (e.g., Always, IfNotPresent, Never)
         pullPolicy: IfNotPresent
 
