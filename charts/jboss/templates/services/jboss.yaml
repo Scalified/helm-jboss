@@ -1,18 +1,16 @@
-{{- if .Values.jboss.service }}
-{{- with .Values.jboss.service }}
+{{- if .Values.jboss.services }}
+{{- range .Values.jboss.services }}
+---
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "jboss.fullname" $ }}
-  labels:
-    {{- include "jboss.labels" $ | nindent 4 }}
+  name: {{ include "jboss.fullname" $ }}{{- if .name }}-{{ .name }}{{- end }}
+  labels: {{- include "jboss.labels" $ | nindent 4 }}
 spec:
-  selector:
-    {{- include "jboss.selectorLabels" $ | nindent 4 }}
+  selector: {{- include "jboss.selectorLabels" $ | nindent 4 }}
   type: {{ .type }}
   {{- if .ports }}
-  ports:
-    {{- toYaml .ports | nindent 4 }}
+  ports: {{- toYaml .ports | nindent 4 }}
   {{- end }}
 {{- end }}
 {{- end }}

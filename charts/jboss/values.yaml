@@ -73,8 +73,11 @@ jboss:
       #     subPath: deployments
       volumeMounts: []
 
-      # Default port for the JBoss HTTP service (repository manager UI and API)
-      port: 8080
+      # List of ports to expose from the JBoss container
+      ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
 
   # Hostname used for the JBoss pod/container
   hostname: jboss
@@ -93,17 +96,17 @@ jboss:
   #       claimName: jboss
   volumes: []
 
-  # Configuration for the Kubernetes Service exposing JBoss
-  service:
+  # Configuration for the Kubernetes Services exposing JBoss
+  services:
     # Kubernetes service type (e.g., ClusterIP, NodePort, LoadBalancer)
-    type: ClusterIP
-    # List of ports to expose via the service
-    # Each entry defines a port name, external service port, internal container target port, and protocol
-    ports:
-      - name: http
-        port: 8080
-        targetPort: 8080
-        protocol: TCP
+    - type: ClusterIP
+      # List of ports to expose via the service
+      # Each entry defines a port name, external service port, internal container target port, and protocol
+      ports:
+        - name: http
+          port: 8080
+          targetPort: 8080
+          protocol: TCP
 
   # Configuration for Ingress to expose JBoss via HTTP/HTTPS
   # Example:
