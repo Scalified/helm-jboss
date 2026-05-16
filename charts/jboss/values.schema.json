@@ -171,7 +171,7 @@
         "hostname": {
           "type": "string",
           "description": "Hostname used for the JBoss pod/container",
-          "default": "jboss"
+          "default": ""
         },
         "imagePullSecrets": {
           "type": "array",

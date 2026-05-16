@@ -80,7 +80,7 @@ jboss:
           protocol: TCP
 
   # Hostname used for the JBoss pod/container
-  hostname: jboss
+  hostname: ""
 
   # Image pull secrets for the JBoss container
   # Example
